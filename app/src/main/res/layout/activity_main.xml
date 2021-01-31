@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:padding="30dp"
+        android:text="请输入点赞步数"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"></TextView>
+
+
+    <EditText
+        android:id="@+id/edit_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:hint="0或者不输入默认全部点赞"
+        android:inputType="number"
+        android:maxLength="8"
+        android:maxLines="1"></EditText>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@color/colorPrimary"
+        android:onClick="startLike"
+        android:text="开始点赞"
+        android:textColor="@android:color/white"></androidx.appcompat.widget.AppCompatButton>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:lineSpacingExtra="8dp"
+        android:padding="15dp"
+        android:text="1、每次点赞前先进入微信运动排行榜页面，并使列表处于顶部\n2、点赞过程中操作或退出页面会停止点赞"
+        android:textSize="12sp"></TextView>
+</LinearLayout>

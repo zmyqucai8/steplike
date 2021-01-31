@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">微信运动点赞</string>
+    <string name="accessibility_description">微信运动自动点赞</string>
+    <string name="accessibility_name">微信运动自动点赞辅助</string>
+</resources>
