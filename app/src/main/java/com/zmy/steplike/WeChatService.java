@@ -83,7 +83,7 @@ public class WeChatService extends AccessibilityService {
                 } else if (current_process == process_start_like && current_step == step_default) {
                     ToastUtils.showLong("请先手动进入微信运动排行榜页面");
                 } else if (current_process == process_start_like) {
-                    endProcess();
+//                    endProcess();
                 }
 
                 break;
@@ -152,7 +152,8 @@ public class WeChatService extends AccessibilityService {
                         e.printStackTrace();
                     }
                 } else if (count != 0 && count < minCount) {
-                    ToastUtils.showLong("点赞完成（共" + likeCount + "人）");
+                    ToastUtils.showLong("点赞完成");
+                    LogUtils.e("点赞完成1");
                     endProcess();
                 }
             }
@@ -161,7 +162,8 @@ public class WeChatService extends AccessibilityService {
             //判断是否滚动到底部
             if (endNode != null && !endNode.isEmpty()) {
                 //滚动到底部，结束点赞
-                ToastUtils.showLong("点赞完成（共" + likeCount + "人）");
+                ToastUtils.showLong("点赞完成");
+                LogUtils.e("点赞完成2");
                 endProcess();
             } else {
                 //没有滚到底部，继续滚动
@@ -176,6 +178,7 @@ public class WeChatService extends AccessibilityService {
 
             if (current_process == process_start_like)
                 ToastUtils.showShort("没有找到排行榜列表");
+            LogUtils.e("点赞完成3");
             endProcess();
         }
 
