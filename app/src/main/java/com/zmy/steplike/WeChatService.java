@@ -115,7 +115,7 @@ public class WeChatService extends AccessibilityService {
             return;
         }
         current_step = step_like_ing;
-        List<AccessibilityNodeInfo> listViewNodes = getRootInActiveWindow().findAccessibilityNodeInfosByViewId("com.tencent.mm:id/c68");
+        List<AccessibilityNodeInfo> listViewNodes = getRootInActiveWindow().findAccessibilityNodeInfosByViewId("com.tencent.mm:id/cmh");//列表 listview
         AccessibilityNodeInfo listViewNode = null;
         if (null != listViewNodes && !listViewNodes.isEmpty()) {
             listViewNode = listViewNodes.get(0);
@@ -123,12 +123,12 @@ public class WeChatService extends AccessibilityService {
 
         if (null != listViewNode) {
             //获取当前屏幕上的人信息
-            List<AccessibilityNodeInfo> nameList = listViewNode.findAccessibilityNodeInfosByViewId("com.tencent.mm:id/c6d");//名字
-            List<AccessibilityNodeInfo> countList = listViewNode.findAccessibilityNodeInfosByViewId("com.tencent.mm:id/c5a");//步数
-            List<AccessibilityNodeInfo> likeList = listViewNode.findAccessibilityNodeInfosByViewId("com.tencent.mm:id/c5u");//点赞爱心的父布局可点击的
+            List<AccessibilityNodeInfo> nameList = listViewNode.findAccessibilityNodeInfosByViewId("com.tencent.mm:id/cmo");//名字
+            List<AccessibilityNodeInfo> countList = listViewNode.findAccessibilityNodeInfosByViewId("com.tencent.mm:id/cll");//步数
+            List<AccessibilityNodeInfo> likeList = listViewNode.findAccessibilityNodeInfosByViewId("com.tencent.mm:id/cma");//点赞爱心的父布局可点击的
 
-            //结束标志：邀请朋友
-            List<AccessibilityNodeInfo> endNode = listViewNode.findAccessibilityNodeInfosByViewId("com.tencent.mm:id/dzn");
+            //结束标志：邀请朋友 TextView
+            List<AccessibilityNodeInfo> endNode = listViewNode.findAccessibilityNodeInfosByViewId("com.tencent.mm:id/f94");
 
 //            com.tencent.mm:id/cry 邀请朋友
 //            com.tencent.mm:id/gap   xxx占领了封面
